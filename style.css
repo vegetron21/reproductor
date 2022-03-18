@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 5%, rgb(2, 2, 24) 60%, rgb(0, 123, 148) 100%);
+    color: white;
+}
+.contenedor-padre{
+    margin: auto;
+}
+.videoprincipal{
+    background: rgb(0, 0, 0);
+    width: 100%;
+    position: fixed;
+    margin-top: -480px;
+}
+video{
+    width: 80%;
+    margin-left: 10%;
+    height: 440px;
+    margin-top: 5px;
+}
+#vplaylist li a {
+    color: #ccc; /* Color de las canciones */
+    font-size: 25px;
+}
+#vplaylist .active a {
+color: rgb(182, 42, 42); /* Color de la canción activa */
+font-style: Georgia;
+text-decoration: none;
+}
+#vplaylist .active a .capitulos {
+background: rgba(15, 15, 15, 0.733);
+}
+#vplaylist .active a .capitulos:before {
+    content: "\25B6";
+    color: rgb(201, 15, 15); /* Color del icono Play */
+    font-style: normal;
+    padding-right: 8px;
+}
+.contenedor-padre .contenedor3 #vplaylist li a:visited {
+    color: blue;
+}
+.contenedor{
+    overflow: hidden;
+    margin-top: 480px;
+}
+.sinopsis{
+    max-width: 2000px;  
+    width: 70%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+.sinopsis h1{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: rgb(230, 230, 230);
+    text-transform: capitalize;
+}
+.sinopsis p{
+    font-size: 15px;
+    color: rgb(182, 182, 182);
+}
+.contenedor2{
+    background: rgb(0, 0, 0);
+    max-width: 2000px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contenedor2 h1{
+    background: rgb(180, 19, 19);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.contenedor2 h1 a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+    padding: 10px;
+}
+.contenedor2 h1:hover{
+    background: rgb(255, 0, 0);
+}
+.contenedor2 h2{
+    font-size: 15px;
+}
+.contenedor2 ul li ul{
+    display: none;
+}
+.contenedor2 ul li{
+    background: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    width: 200px;
+}
+.contenedor2 ul li:hover > ul{
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+}
+.contenedor2 ul{
+   list-style: none;
+}
+.contenedor2 ul ul a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contenedor2 a:hover > li{
+    background: red;
+}
+/* listado de capitulos */
+.contenedor3{
+    overflow: hidden;
+}
+.contenedor3 a{
+    background: rgb(0, 123, 148);
+    background: linear-gradient(90deg, rgba(0, 123, 148, 0.24) 5%, rgb(2, 2, 24) 60%, rgb(0, 0, 0) 100%);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    width: 70%;
+    margin-left: 15%;
+}
+.contenedor3 li{
+    list-style: none;
+    width: 100%;
+}
+.contenedor3 a:visited{
+    color: rgb(204, 0, 0);
+}
+.capitulos{
+    background: rgb(0, 0, 0);
+    width: 60%;
+    max-width: 2000px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: auto;
+    height: 75px;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.contenedor3 .capitulos img{
+    height: 100%;
+    border-radius: 5px;
+}
