@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="contenedor-padre">
+        <div class="videoprincipal">
+            <div id="vplayer">
+                <video controls='' poster="portada/4.gif" preload='auto' tabindex='0' type='video/mp4'>
+                    <source src="videos/1.mp4" type="video/mp4"></source>
+                </video>
+            </div>
+        </div>
+    
+        <div class="contenedor">
+            <div class="sinopsis">
+                <h1>aMO,RD</h1>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nulla consequatur iure perferendis molestiae, suscipit harum ex quibusdam veritatis exercitationem delectus nostrum consectetur labore, officia voluptatibus animi eos nihil nam?</P>
+            </div>
+            <!-- temporadas -->
+            <div class="contenedor2">
+                <h1><a href="#">REGRESAR-INICIO</a></h1>
+                <ul>
+                    <li><h2>TEMPORADAS</h2>
+                        <ul>
+                            <a href="index.php"><li>Temporada - 1</li></a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- episodios -->
+            <div class="contenedor3">
+                <ul id="vplaylist">
+                    <li class="active"><a href="https://github.com/vegetron21/prueba/blob/main/videos/1.mp4"><div class="capitulos">Episodio. 1<img src="portada/1.jpg" alt=""></div></a></li>
+                    <li><a href="videos/2.mp4"><div class="capitulos">Episodio. 2<img src="portada/1.jpg" alt=""></div></a></li>
+                    <li><a href="videos/3.mp4"><div class="capitulos">Episodio. 3<img src="portada/1.jpg" alt=""></div></a></li>
+                    <li><a href="videos/4.mp4"><div class="capitulos">Episodio. 4<img src="portada/1.jpg" alt=""></div></a></li>
+                    <li><a href="videos/5.mp4"><div class="capitulos">Episodio. 5<img src="portada/1.jpg" alt=""></div></a></li>
+                    <li><a href="videos/6.mp4"><div class="capitulos">Episodio. 6<img src="portada/1.jpg" alt=""></div></a></li>
+                </ul>
+                <script src='js/jquery.js' type='text/javascript'></script> 
+
+            <script>
+            var video;var vplaylist;var vtracks;var vcurrent;initvideo();function initvideo(){vcurrent=0;video=$('video');vplaylist=$           ('#vplaylist');vtracks=vplaylist.find('li a');vlen=vtracks.length-1;video[0].volume=1;vplaylist.find('a').click(function(e){e.      preventDefault();link=$(this);vcurrent=link.parent().index();runvideo(link,video[0])});video[0].addEventListener('ended',function(e)        {vcurrent++;if(vcurrent>vlen){vcurrent=0;link=vplaylist.find('a')[0]}else{link=vplaylist.find('a')[vcurrent]}runvideo($(link),video        [0])})}function runvideo(link,player){player.src=link.attr('href');par=link.parent();par.addClass('active').siblings().removeClass         ('active');video[0].load();video[0].play()}
+            </script>
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>
